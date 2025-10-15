@@ -100,6 +100,8 @@ section{
 
 .home-content {
     overflow-x: hidden;
+    padding: 4rem;
+    margin: -4rem;
 }
 
 .home .home-content h1{
@@ -316,7 +318,6 @@ span{
         width: 70vw;
         margin-top: 4rem;
     }
-=
 }
 
 .skills h2 {
