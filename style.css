@@ -1,0 +1,403 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    overflow-x: hidden;
+    
+    /* NOSSO NOVO FUNDO DEGRADÊ */
+    background: linear-gradient(to bottom, #1a1a1a, black);
+    background-repeat: no-repeat; /* Garante que não repita */
+    background-attachment: fixed;  /* Mantém o degradê fixo durante a rolagem */
+
+    color: white;
+    min-height: 100%; /* Garante que o body se estenda com o conteúdo */
+}
+
+body.home-view {
+    height: 100vh;
+    padding-top: 0; 
+}
+
+header{
+    margin-top: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 9%;
+    background-color: transparent;
+    filter: drop-shadow(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo{
+    font-size: 3rem;
+    color: #C39B71;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.logo:hover{
+    transform: scale(1.1);
+}
+
+nav a{
+    font-size: 1.8rem;
+    color: white;
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+nav a:hover,
+nav a.active{
+    color: #C39B71;
+    border-bottom: 3px solid #C39B71;
+}
+
+#menu-icon {
+    display: none;
+    font-size: 3.6rem;
+    color: white;
+    cursor: pointer;
+    position: relative;
+    z-index: 101; 
+}
+
+section{
+    min-height: 100vh;
+    padding: 5rem 9% 5rem;
+    animation: fadeIn 0.5s ease-in-out; 
+}
+
+.home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+    background: linear-gradient(to bottom, #573022, #0f090b);
+}
+
+.home-content {
+    overflow-x: hidden;
+}
+
+.home .home-content h1{
+    font-size: 6rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+span{
+    color: #C39B71;
+}
+
+.home-content h3{
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.home-content p{
+    font-size: 1.6rem;
+}
+
+.home-img{
+    border-radius: 50%;
+}
+
+.home-img img{
+    position: relative;
+    width: 32vw;
+    border-radius: 50%;
+    box-shadow: 0 0 25px solid #C39B71;
+    cursor: pointer;
+    transition: 0.2s linear;
+}
+
+.home-img img:hover{
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.social-icons a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background-color: transparent;
+    border: 0.2rem solid #C39B71;
+    font-size: 2rem;
+    border-radius: 50%;
+    margin: 3rem 1.5rem 3rem 0;
+    transition: 0.3s ease;
+    color: #C39B71;
+}
+
+.social-icons a:hover{
+    color: black;
+    transform: scale(1.3) translateY(-5px);
+    background-color: #C39B71;
+    box-shadow: 0  0 25px #C39B71;
+}
+
+.btn{
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background-color: #110b0b;
+    border-radius: 4rem;
+    font-size: 1.6rem;
+    color: #C39B71;
+    letter-spacing: 0.3rem;
+    font-weight: 600;
+    border: 2px solid #C39B71;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.btn:hover{
+    transform: scale3d(1.03);
+    background-color: #C39B71;
+    color: black;
+    box-shadow: 0 0 25px #C39B71;
+}
+
+.typing-text {
+    font-size: 34px;
+    font-weight: 600;
+    min-width: 280px;
+    overflow: hidden;
+}
+
+.typing-text span{
+    position: relative;
+}
+
+.typing-text span::before{
+    content: "software Developer";
+    color: #C39B71;
+    animation: words 20s infinite;
+}
+
+.typing-text span::after{
+    content: "";
+    background-color: black transparent;
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    border-left: 3px solid black;
+    right: -8;
+    animation: cursor 0.6s infinite;
+}
+
+@keyframes cursor{
+    to{
+        border-left: 3px solid #C39B71;
+    }
+}
+
+@keyframes words{
+    0%, 25%{
+        content: "DevOps Engineer";
+    }
+    26%, 50%{
+        content: "DevSecOps Specialist";
+    }
+    51%, 75%{
+        content: "Cloud Security Enthusiast";
+    }
+    76%, 100%{
+        content: "Automation Expert";
+    }
+    
+}
+
+@media (max-width: 1000px){
+    .home{
+        gap: 4rem;
+    }
+}
+
+@media(max-width: 995px) {
+    #menu-icon {
+        display: block;
+    }
+
+    header nav a {
+        display: none;
+    }
+
+    header nav {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 60%;
+        max-width: 300px;
+        height: 100vh;
+        background-color: rgba(41, 35, 22, 0.65);
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+        box-shadow: -5px 0px 20px rgba(0, 0, 0, 0.5);
+        transform: translateX(100%);
+        transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1), background-color 0.4s ease;
+        border: none;
+        display: flex;
+        flex-direction: column;
+        padding-top: 8rem;
+        z-index: 100;
+        margin-left: 0; 
+    }
+
+    body.home-view header nav {
+        background-color: rgba(39, 25, 20, 0.65);
+    }
+
+    header nav.active {
+        transform: translateX(0);
+    }
+
+    header nav.active a {
+        display: block;
+        font-size: 2rem;
+        color: white;
+        text-align: center;
+        padding: 1.5rem 1rem;
+        margin: 1rem 2rem;
+        border-radius: 8px;
+        transition: background-color 0.3s ease, color 0.3s ease;
+        border-bottom: none;
+    }
+
+    header nav.active a:hover,
+    header nav.active a.active {
+        color: #C39B71;
+        background-color: rgba(195, 155, 113, 0.1); 
+        border-bottom: none;
+        padding: 1.5rem 1rem;
+        border-radius: 8px;
+    }
+
+    .home {
+        flex-direction: column;
+        margin: 0;
+        padding: 8rem 4rem 5rem 4rem; 
+    }
+
+    .home .home-content h3 {
+        font-size: 2.5rem;
+    }
+
+    .home-content h1 {
+        font-size: 5rem;
+    }
+
+    .home-img img {
+        width: 70vw;
+        margin-top: 4rem;
+    }
+=
+}
+
+.skills h2 {
+    text-align: center;
+    font-size: 4rem;
+    margin-bottom: 5rem;
+}
+
+.skills-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.skill-box {
+    flex: 1 1 30rem;
+    background-color: #161616;
+    padding: 3rem 2rem 4rem;
+    border-radius: 2rem;
+    text-align: center;
+    border: 2px solid transparent;
+    transition: 0.3s ease;
+}
+
+.skill-box:hover {
+    border-color: #C39B71;
+    transform: scale(1.02);
+}
+
+.skill-box i {
+    font-size: 7rem;
+    color: #C39B71;
+}
+
+.skill-box h3 {
+    font-size: 2.5rem;
+    margin: 1rem 0;
+}
+
+.skill-box p {
+    font-size: 1.6rem;
+}
+
+.hidden {
+    display: none !important;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+section {
+    min-height: 100vh;
+    padding: 12rem 9% 5rem; 
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+
+.about {
+    display: flex;
+    justify-content: flex-start; 
+    align-items: center;   
+    flex-direction: column;
+}
+
+.about-content {
+    max-width: 100rem;
+    text-align: center; 
+}
+
+.about-content h2 {
+    font-size: 4.5rem;
+    margin-bottom: 3rem;
+}
+
+.about-content p {
+    font-size: 1.8rem;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+}
+
