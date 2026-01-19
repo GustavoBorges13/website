@@ -30,6 +30,20 @@ const projectsData = {
         links: [
         ]
     },
+    'ihc_boostrap': {
+        title: "Musikcity prototype website",
+        description: "This project was developed solely for academic purposes in the Human-Computer Interaction (HCI) course. It has no affiliation with the company Musikcity and is not used for commercial purposes.",
+        techs: ["HTML", "CSS", "Javascript", "website", "IHC", "Educational purpose"],
+        images: [
+            // Substitua pelos caminhos reais das suas imagens/gifs
+            "imagens/Projetos/ihc_boostrap/thumb.png", 
+        ],
+        links: [
+            { text: "GitHub Repo", url: "https://github.com/GustavoBorges13/Projeto-ihc-boostrap-" },
+            { text: "Page Preview", url: "https://gustavoborges13.github.io/Projeto-ihc-boostrap-/" }
+        ],
+        statusCheckUrl: "https://gustavoborges13.github.io/Projeto-ihc-boostrap-/" 
+     },
     'logicban': {
         title: "LogicBan - Game",
         description: "LogicBan is a 2D game developed in Java as an academic project. The objective of the game is to challenge players with engaging logic-based puzzles.",
