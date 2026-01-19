@@ -30,6 +30,23 @@ const projectsData = {
         links: [
         ]
     },
+    'logicban': {
+        title: "LogicBan - Game",
+        description: "LogicBan is a 2D game developed in Java as an academic project. The objective of the game is to challenge players with engaging logic-based puzzles.",
+        techs: ["java", "Multi-version", "PC-game", "Graphics2d", "Audio", "JFrame"],
+        images: [
+            // Substitua pelos caminhos reais das suas imagens/gifs
+            "imagens/Projetos/logicban/inicio.gif", 
+            "imagens/Projetos/logicban/fase1.gif", 
+            "imagens/Projetos/logicban/fase2.gif",
+            "imagens/Projetos/logicban/fase3.gif",
+            "imagens/Projetos/logicban/fase4.gif",
+        ],
+        links: [
+            { text: "GitHub Repo", url: "https://github.com/GustavoBorges13/LogicBan" },
+            { text: "Download Game", url: "https://github.com/GustavoBorges13/LogicBan/releases/tag/v2.2.1" }
+        ]
+     },
     'ti_automation': {
         title: "TI - Technical Report Automation", // Corrigi o typo 'Tecnhincal'
         description: "During my internship at HPE, I developed a tool that simplifies the transfer of spreadsheet data from the server by generating easy-to-edit tables through Java-based graphical interfaces...",
