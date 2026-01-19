@@ -75,7 +75,12 @@ const projectsData = {
         ],
         
         links: [
-            { text: "Github URL", url: "https://github.com/GustavoBorges13/Conversor_XLSX-PDF" }
+            { text: "Github URL", url: "https://github.com/GustavoBorges13/Conversor_XLSX-PDF" },
+            { 
+                text: "Download the report in PDF format", 
+                url: "arquivos/hpe_ti/relatorio_projeto.pdf", 
+                download: true // Propriedade nova para avisar que é download
+            }
         ]
     },
 };
@@ -193,18 +198,27 @@ function openProject(projectId) {
     // Links
     const linkContainer = document.getElementById('wiki-links');
     linkContainer.innerHTML = '';
+    
     if(project.links) {
         project.links.forEach(link => {
             const a = document.createElement('a');
             a.href = link.url;
-            a.target = "_blank";
-            a.className = "btn"; 
             
-            // REMOVA OU COMENTE ESTA LINHA ABAIXO:
-            // a.style.marginTop = "20px"; 
-            // (Agora o CSS .wiki-links { margin-top: 2rem } cuida disso)
+            // LÓGICA DE DOWNLOAD
+            if (link.download) {
+                // Se for download, adiciona o atributo que força baixar
+                a.setAttribute('download', ''); 
+                // Ícone de Download ou PDF pra ficar bonito (opcional)
+                a.innerHTML = `<i class="fa-solid fa-file-pdf"></i> ${link.text}`;
+            } else {
+                // Se for link normal, abre em nova aba
+                a.target = "_blank";
+                a.textContent = link.text;
+            }
 
-            a.textContent = link.text;
+            a.className = "btn"; 
+            // a.style.marginTop = "20px"; // (Lembra que removemos isso pq usamos CSS gap?)
+            
             linkContainer.appendChild(a);
         });
     }
