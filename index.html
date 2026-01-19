@@ -276,16 +276,30 @@
         <!-- CONTACT SECTION -->
         <section class="contact hidden" id="contact">
             <h2 class="heading">Contact <span>Me</span></h2>
-            <form action="#">
+            
+            <form action="https://formspree.io/f/xwvvozzr" method="POST">
+                
                 <div class="input-box">
-                    <input type="text" placeholder="Full Name">
-                    <input type="email" placeholder="Email Address">
+                    <!-- O atributo 'name' é obrigatório para você saber o que é o que -->
+                    <input type="text" name="name" placeholder="Full Name" required>
+                    <input type="email" name="email" placeholder="Email Address" required>
                 </div>
+                
                 <div class="input-box">
-                    <input type="number" placeholder="Mobile Number">
-                    <input type="text" placeholder="Email Subject">
+                    <input type="number" name="phone" placeholder="Mobile Number">
+                    <!-- O campo oculto _subject define o assunto do email que chega pra você -->
+                    <input type="text" name="_subject" placeholder="Email Subject" required>
                 </div>
-                <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+                
+                <textarea name="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
+                
+                <!-- Truques do Formspree -->
+                <!-- Redirecionar usuário de volta pro seu site depois de enviar -->
+                <!-- <input type="hidden" name="_next" value="http://gustavos.cloud/"> -->
+                
+                <!-- Evitar Spam (Honeypot) -->
+                <input type="text" name="_gotcha" style="display:none">
+
                 <input type="submit" value="Send Message" class="btn">
             </form>
         </section>
