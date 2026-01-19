@@ -84,6 +84,212 @@
             </div>
         </section>
 
-        <script src="script.js"></script>
-    </body>
+        <!-- EXPERIENCE SECTION -->
+        <section class="experience hidden" id="experience">
+            <h2 class="heading">Professional <span>Experience</span></h2>
+
+            <div class="hover-instruction">
+                <i class="fa-solid fa-computer-mouse"></i>
+                <span>Hover over the blocks to view project previews</span>
+            </div>
+
+
+            <div class="timeline">
+                
+                <!-- Experiência 1: HPE (Mais recente) -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2022 - 2024</div>
+                    
+                    <div class="timeline-content" 
+                         data-images='["imagens/hpe_TI/img_1.png", "imagens/hpe_TI/img_2.png", "imagens/hpe_TI/img_3.png", "imagens/hpe_TI/img_4.png"]'
+                         data-project="ti_automation">
+                        
+                        <h3>IT Service Desk Intern</h3>
+                        <p class="company">HPE Automotores do Brasil (Mitsubishi Motors)</p>
+                        <p>
+                            Provided technical support and ensured datacenter security standards.
+                            <br><br>
+                            <strong>Key Achievement:</strong> Autonomously developed a <strong>Java GUI application</strong> to automate technical reporting. By handling data transfer from spreadsheets to Word/PDF, the tool <strong>reduced manual processing time by 5–10 minutes per task</strong>. This eliminated the need for multi-window multitasking, significantly improving workflow efficiency.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Experiência 2: BW&P (Com os novos dados) -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2021 - 2022</div>
+                    <div class="timeline-content" data-images='["imagens/hpe_logistica/renderv2.mp4", "imagens/hpe_logistica/img_0.jpg", "imagens/hpe_logistica/img_1.jpg", "imagens/hpe_logistica/img_2.jpg", "imagens/hpe_logistica/img_3.jpg", "imagens/hpe_logistica/img_4.jpg", "imagens/hpe_logistica/img_5.jpg", "imagens/hpe_logistica/video_demo.mp4", "imagens/hpe_logistica/img_6.png", "imagens/hpe_logistica/img_7.png","imagens/hpe_logistica/img_8.png"]'>
+                        <h3>Administrative & Logistics Assistant</h3>
+                        <p class="company">BW&P Sistemas de Solda e Pintura</p>
+                        <p class="company">HPE Automotores do Brasil (Mitsubishi Motors)</p>
+                        <p>
+                            Worked on logistics flow and inventory management.
+                            <br><br>
+                            <strong>Key Projects:</strong>
+                            <ul style="list-style-position: inside; margin-top: 10px;">
+                                <li><strong>Gravity Roller Conveyor:</strong> Designed and implemented a conveyor system for the unloading area. This optimization reduced forklift travel distance and <strong>increased packaging analysis productivity by over 50%</strong>.</li>
+                                <li style="margin-top: 8px;"><strong>AGV Prototype (Arduino):</strong> Developed a functional <strong>Proof of Concept (PoC)</strong> for an Automated Guided Vehicle. Successfully demonstrated the feasibility of magnetic line tracking for internal transport automation.</li>
+                            </ul>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Educação -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2021 - Present</div>
+                    <div class="timeline-content" data-images='["imagens/none", "imagens/none"]'>
+                        <h3>Computer Science Student</h3>
+                        <p class="company">Federal University of Catalão (UFCAT)</p>
+                        <p>Currently in the 7th semester. Leveraging my background in industrial automation to build efficient Cloud & DevOps solutions. Certified in Huawei Cloud Services (HCIA).</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- PROJECTS SECTION (NOVA LISTA HORIZONTAL) -->
+        <section class="projects hidden" id="projects">
+            <h2 class="heading">Latest <span>Projects</span></h2>
+            
+            <div class="projects-list">
+                
+                <!-- PROJETO 1: IOT DASHBOARD -->
+                <div class="project-row">
+                    <div class="project-thumb">
+                        <img src="imagens/Projetos/iot_project_1/img_1.png" alt="IoT Dashboard">
+                    </div>
+                    <div class="project-info">
+                        <h3>IoT Control Dashboard</h3>
+                        <p>A complete remote control system for ESP8266 devices. Features real-time Websocket communication, RGB LED manipulation, and live webcam monitoring through a secure web interface.</p>
+                        <div class="project-tags">
+                            <span>C++</span>
+                            <span>WebSockets</span>
+                            <span>JS</span>
+                        </div>
+                        <a href="#" class="btn-wiki" onclick="openProject('iot-dashboard')">
+                            View Wiki <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- PROJETO 2: MINECRAFT -->
+                <div class="project-row">
+                    <div class="project-thumb">
+                        <img src="imagens/minecraft-thumb.jpg" alt="Minecraft Server" onerror="this.src='https://placehold.co/600x400/1a1a1a/C39B71?text=Oracle+Cloud'">
+                    </div>
+                    <div class="project-info">
+                        <h3>Minecraft Admin Panel</h3>
+                        <p>Automated server management hosted on Oracle Cloud using Virtual Machines. Includes a custom Python administration panel and Cloudflared tunneling for secure access.</p>
+                        <div class="project-tags">
+                            <span>Python</span>
+                            <span>Oracle Cloud</span>
+                            <span>Linux</span>
+                        </div>
+                        <a href="#" class="btn-wiki" onclick="openProject('minecraft_server')">
+                            View Wiki <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- PROJETO 3: JAVA AUTOMATION (TI) -->
+                <div class="project-row">
+                    <div class="project-thumb">
+                        <img src="imagens/java-thumb.jpg" alt="Java Tool" onerror="this.src='https://placehold.co/600x400/1a1a1a/C39B71?text=Java+Automation'">
+                    </div>
+                    <div class="project-info">
+                        <h3>Technical Report Tool</h3>
+                        <p>A Java GUI application developed to automate data export from spreadsheets to Word/PDF. Reduced manual processing time by 5–10 minutes per task at HPE Automotores.</p>
+                        <div class="project-tags">
+                            <span>Java</span>
+                            <span>Automation</span>
+                            <span>GUI</span>
+                        </div>
+                        <a href="#" class="btn-wiki" onclick="openProject('ti_automation')">
+                            View Wiki <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- PROJETO 4: ,,, -->
+               
+
+            </div>
+        </section>
+
+        <!-- PROJECT DETAILS / WIKI SECTION (ESCONDIDO POR PADRÃO) -->
+        <section class="project-details hidden" id="project-wiki">
+            <button class="btn-back" onclick="closeProject()"><i class="fa-solid fa-arrow-left"></i> Back to Projects</button>
+            
+            <div class="wiki-content">
+                <h2 id="wiki-title">Project Title</h2>
+                
+                <div id="wiki-status-container" style="display: flex; justify-content: center; margin-bottom: 10px;">
+                    <!-- O JS vai injetar o badge aqui se necessário -->
+                </div>
+
+
+                <!-- Slideshow Container -->
+                <div class="slideshow-container">
+                    <div class="slide-wrapper" id="wiki-slides">
+                        <!-- Imagens injetadas via JS -->
+                    </div>
+                    <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+                    <button class="next" onclick="moveSlide(1)">&#10095;</button>
+                </div>
+
+                <div class="wiki-info">
+                    <h3>About the Project</h3>
+                    <p id="wiki-desc">Description goes here...</p>
+                    
+                    <h3>Technologies Used</h3>
+                    <ul id="wiki-techs" class="tech-list">
+                        <!-- Techs injetadas via JS -->
+                    </ul>
+
+                    <div class="wiki-links" id="wiki-links">
+                        <!-- Links (GitHub/Live) injetados via JS -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section class="contact hidden" id="contact">
+            <h2 class="heading">Contact <span>Me</span></h2>
+            <form action="#">
+                <div class="input-box">
+                    <input type="text" placeholder="Full Name">
+                    <input type="email" placeholder="Email Address">
+                </div>
+                <div class="input-box">
+                    <input type="number" placeholder="Mobile Number">
+                    <input type="text" placeholder="Email Subject">
+                </div>
+                <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+                <input type="submit" value="Send Message" class="btn">
+            </form>
+        </section>
+
+        <!-- POPUP FLUTUANTE COM CONTROLES -->
+        <div id="hover-popup" class="hover-popup">
+            <!-- Mídia -->
+            <img id="popup-img" src="" alt="">
+            <video id="popup-video" muted loop playsinline></video>
+            <p id="popup-text" class="no-preview-msg">NO PREVIEW</p>
+            
+            <!-- NOVOS CONTROLES -->
+            <div class="popup-controls" id="popup-controls">
+                <button id="btn-prev"><i class="fa-solid fa-chevron-left"></i></button>
+                
+                <!-- ADICIONEI O ID="popup-info-text" AQUI -->
+                <span id="popup-info-text" class="control-text">SLIDESHOW</span>
+                
+                <button id="btn-next"><i class="fa-solid fa-chevron-right"></i></button>
+            </div>
+        </div>
+
+    <script src="script.js"></script>
+</body>
 </html>
