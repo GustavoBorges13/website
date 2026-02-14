@@ -191,10 +191,14 @@ span{
 }
 
 .typing-text {
-    font-size: 34px;
+    color: #C39B71; /* Cor dourada */
     font-weight: 600;
-    min-width: 280px;
-    overflow: hidden;
+}
+
+/* O Typed.js cria essa classe automaticamente para o cursor piscando */
+.typed-cursor {
+    color: #C39B71;
+    font-size: 4rem; /* Ajuste para combinar com o tamanho do texto */
 }
 
 .typing-text span{

@@ -6,7 +6,8 @@
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
         <link rel="stylesheet" href="style.css">
-        <title>Gustavo Silva | DevOps & Cloud Security</title>
+        <!-- ALTERAÇÃO 1: Título atualizado -->
+        <title>Gustavo Silva | Backend & DevOps Student</title>
     </head>
     <body class="home-view">
         <header>
@@ -32,12 +33,20 @@
             </div>
             <div class="home-content">
                 <h1>Hi, I'm <span>Gustavo</span></h1>
-                <h3 class="typing-text">I'm a <span></span></h3>
+                
+                <!-- OBSERVAÇÃO IMPORTANTE: O texto que fica digitando ("DevOps Engineer") 
+                     geralmente está configurado no seu arquivo script.js. 
+                     Você precisará ir lá no JS e mudar o array de textos para algo como:
+                     ["Backend Developer", "CS Student", "DevOps Enthusiast"] -->
+                <h3>I'm a <span class="typing-text"></span></h3>
+                
+                <!-- ALTERAÇÃO 2: Texto descritivo ajustado para perfil acadêmico/backend -->
                 <p>
-                    A Computer Science student passionate about automation and security. 
-                    Specializing in DevOps & DevSecOps, I transform infrastructure into code and 
-                    build secure, efficient CI/CD pipelines with tools like Docker, Kubernetes, AWS, and Terraform.
+                    A Computer Science student passionate about <strong>Backend Development</strong> and Automation. 
+                    While building strong foundations in server-side logic, I am specializing in <strong>DevOps & Cloud Security</strong> 
+                    to create efficient CI/CD pipelines and secure infrastructure using tools like Docker, Kubernetes, and AWS.
                 </p>
+
                 <div class="social-icons">
                     <a href="https://www.linkedin.com/in/gustavo-borgez/"  target="_blank"><i class="fa-brands fa-linkedin"></i></a>
                     <a href="https://github.com/GustavoBorges13" target="_blank"><i class="fa-brands fa-github"></i></a>
@@ -45,10 +54,14 @@
                     <a href="https://linktr.ee/GustavoBorges13"  target="_blank"><i class="fa-solid fa-link"></i></a>
                     <a href="mailto:ggustavo.borges13@gmail.com"><i class="fa-solid fa-envelope"></i></a>
                 </div>
-                <!--<a href="/path/to/your/cv.pdf" class="btn" download>Download CV</a> -->
+
+                <!-- ALTERAÇÃO 3: Botão do Currículo adicionado aqui -->
+                <a href="https://gustavoborges13.github.io/curriculo/eng_index.html" target="_blank" class="btn">View CV</a>
+            
             </div>
         </section>
 
+        <!-- O RESTANTE DO CÓDIGO PERMANECE IGUAL ABAIXO... -->
         <!-- ABOUT SECTION -->
         <section class="about hidden" id="about">
             <div class="about-content">
@@ -61,6 +74,8 @@
                 </p>
             </div>
         </section>
+        
+        <!-- ... (Resto do site igual) ... -->
 
         <!-- SKILLS SECTION -->
         <section class="skills hidden" id="skills">
@@ -342,6 +357,7 @@
             </div>
         </div>
 
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

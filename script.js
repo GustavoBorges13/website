@@ -89,6 +89,14 @@ let currentSlideIndex = 0;
 let currentProjectImages = [];
 
 document.addEventListener('DOMContentLoaded', () => {
+
+    var typed = new Typed(".typing-text", {
+        strings: ["Backend Developer", "Computer Science Student", "DevOps Enthusiast"], 
+        typeSpeed: 100,
+        backSpeed: 60,
+        loop: true
+    });
+
     const header = document.querySelector('header');
     const menuIcon = document.querySelector('#menu-icon');
     const navMenu = document.querySelector('header nav');
@@ -148,12 +156,11 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // --- FUNÇÕES DA WIKI DE PROJETOS ---
-
 function openProject(projectId) {
     const project = projectsData[projectId];
     if (!project) return; // Se não achar o projeto, para.
 
-    // 1. Popula os dados (Título, Descrição, etc)
+    // Popula os dados (Título, Descrição, etc)
     document.getElementById('wiki-title').textContent = project.title;
     document.getElementById('wiki-desc').innerHTML = project.description;
 
@@ -161,28 +168,42 @@ function openProject(projectId) {
     statusContainer.innerHTML = ''; 
 
     if (project.statusCheckUrl) {
-        // 1. Cria o Badge "Checking..."
+        // Cria o Badge "Checking..."
         const badge = document.createElement('div');
         badge.className = 'status-badge';
         badge.innerHTML = '<span class="status-dot"></span> <span id="status-text">Checking Status...</span>';
         statusContainer.appendChild(badge);
 
-        // 2. Tenta conectar usando FETCH (Funciona com CSS, HTML, etc)
-        // mode: 'no-cors' permite checar sites externos sem erro de segurança
-        fetch(project.statusCheckUrl, { method: 'HEAD', mode: 'no-cors' })
-            .then(() => {
-                // SUCESSO: Conseguiu conectar
-                badge.classList.add('online');
-                badge.querySelector('#status-text').textContent = "System Online";
+        // URL anticache
+        const checkUrl = project.statusCheckUrl.replace(/\/$/, "") + "?t=" + new Date().getTime();
+        console.log("Tentando conectar em:", checkUrl);
+
+        // Fetch simples, apenas verifica HTTP
+        fetch(checkUrl)
+            .then(response => {
+                if (response.ok) {
+                    // ONLINE
+                    badge.classList.remove('offline');
+                    badge.classList.add('online');
+                    badge.querySelector('#status-text').textContent = "System Online";
+
+                    const dot = badge.querySelector('.status-dot');
+                    if (dot) dot.style.animation = "pulse-green 2s infinite";
+                } else {
+                    // OFFLINE
+                    throw new Error(`HTTP ${response.status}`);
+                }
             })
-            .catch(() => {
-                // ERRO: Falha de rede (DNS, Timeout, Servidor desligado)
+            .catch(error => {
+                console.error("FALHA DETECTADA:", error);
                 badge.classList.remove('online');
                 badge.classList.add('offline');
                 badge.querySelector('#status-text').textContent = "System Offline";
+
+                const dot = badge.querySelector('.status-dot');
+                if (dot) dot.style.animation = "none";
             });
     }
-
 
     // Techs
     const techList = document.getElementById('wiki-techs');
