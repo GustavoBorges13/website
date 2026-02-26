@@ -90,10 +90,15 @@ let currentProjectImages = [];
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    var typed = new Typed(".typing-text", {
-        strings: ["IT Infrastructure & Automation", "Computer Science Student", "Cloud & DevOps (Learning Path)"], 
-        typeSpeed: 100,
-        backSpeed: 60,
+    new Typed(".typing-text", {
+        strings: [
+            "IT Infrastructure & Automation",
+            "Computer Science Student",
+            "Cloud & DevOps (Learning Path)"
+        ],
+        typeSpeed: 60,
+        backSpeed: 40,
+        backDelay: 1500,
         loop: true
     });
 
