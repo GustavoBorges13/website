@@ -90,16 +90,16 @@ let currentProjectImages = [];
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    new Typed(".typing-text", {
+    var typed = new Typed(".typing-text", {
         strings: [
             "IT Infrastructure & Automation",
             "Computer Science Student",
             "Cloud & DevOps (Learning Path)"
         ],
-        typeSpeed: 60,
-        backSpeed: 40,
-        backDelay: 1500,
-        loop: true
+        typeSpeed: 100,
+        backSpeed: 60,
+        loop: true,
+        contentType: "null"
     });
 
     const header = document.querySelector('header');
