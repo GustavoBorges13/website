@@ -91,7 +91,7 @@ let currentProjectImages = [];
 document.addEventListener('DOMContentLoaded', () => {
 
     var typed = new Typed(".typing-text", {
-        strings: ["Backend Developer", "Computer Science Student", "DevOps Enthusiast"], 
+        strings: ["IT Infrastructure & Automation", "Computer Science Student", "Cloud & DevOps (Learning Path)"], 
         typeSpeed: 100,
         backSpeed: 60,
         loop: true
