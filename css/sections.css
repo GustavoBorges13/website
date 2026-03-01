@@ -1,0 +1,434 @@
+/* HEADER & NAV */
+header {
+    position: fixed;
+    top: 0; 
+    left: 0; 
+    width: 100%;
+    padding: 2rem 9%;
+    
+    /* Fundo Transparente com Blur Forte */
+    background: rgba(0, 0, 0, 0.2); 
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    
+    /* === A CORREÇÃO ESTÁ AQUI === */
+    /* Garante que a barra comece no lugar certo */
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+
+    /* Transição em TUDO. 0.5s é suave. Ease-in-out é natural. */
+    transition: all 0.5s ease-in-out;
+    
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* CLASSE QUE ESCONDE */
+header.hidden{
+  display: flex !important; /* neutraliza o .hidden do base.css */
+  transform: translateY(-100%);
+  opacity: 0;
+  visibility: hidden;
+}
+
+.logo { font-size: 2.5rem; color: var(--main-color); font-weight: 800; }
+
+.logo{ position: relative; z-index: 2; }
+nav{ position: relative; z-index: 1; }
+
+nav a {
+    font-size: 1.7rem; color: white; margin-left: 4rem; font-weight: 500;
+    transition: 0.3s;
+    position: relative;
+}
+
+nav a::after {
+    content: '';
+    position: absolute; left: 0; bottom: -5px;
+    width: 0; height: 2px;
+    background: var(--main-color);
+    transition: 0.3s;
+}
+nav a:hover::after, nav a.active::after { width: 100%; }
+nav a:hover, nav a.active { color: var(--main-color); }
+
+#menu-icon { font-size: 3.6rem; color: var(--text-color); display: none; cursor: pointer; }
+
+/* SECTIONS PADDING */
+section {
+    min-height: auto;
+    padding: 8rem 9% 4rem; /* Um pouco mais de respiro no topo */
+}
+
+/* HOME */
+.home {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+    padding-top: 12rem;
+    background: linear-gradient(to bottom, #573022, #0f090b); 
+}
+.home-content h1 { font-size: 5.6rem; font-weight: 700; line-height: 1.3; }
+.home-content h3 { font-size: 3.2rem; font-weight: 700; margin-bottom: 1rem; }
+.home-content p { font-size: 1.6rem; margin-bottom: 2rem; }
+.home-img img {
+    width: 32vw;
+    border-radius: 50%;
+    box-shadow: 0 0 25px var(--main-color);
+    transition: 0.4s ease;
+}
+.home-img img:hover { transform: scale(1.02); }
+
+.social-icons a {
+    display: inline-flex; justify-content: center; align-items: center;
+    width: 4rem; height: 4rem;
+    background: transparent;
+    border: 2px solid var(--main-color);
+    border-radius: 50%;
+    font-size: 2rem;
+    color: var(--main-color);
+    margin: 3rem 1.5rem 3rem 0;
+    transition: 0.3s ease;
+}
+.social-icons a:hover {
+    background: var(--main-color); color: #000;
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px var(--main-color);
+}
+
+/* ABOUT */
+.about {
+    background: var(--bg-color);
+    display: flex; flex-direction: column; align-items: center;
+}
+.about-content { text-align: center; max-width: 100rem; }
+.about-content h2 { margin-bottom: 3rem; }
+.about-content p { font-size: 1.8rem; margin-bottom: 2rem; line-height: 1.8; }
+
+/* SKILLS */
+.skills { background: var(--bg-color); }
+.skills-container {
+    display: flex; justify-content: center; align-items: center;
+    gap: 2rem; flex-wrap: wrap;
+}
+.skill-box {
+    flex: 1 1 30rem;
+    background: var(--second-bg-color);
+    padding: 3rem 2rem 4rem;
+    border-radius: 2rem;
+    text-align: center;
+    border: 1px solid transparent;
+    transition: 0.4s;
+}
+.skill-box:hover { border-color: var(--main-color); transform: scale(1.02); }
+.skill-box i { font-size: 7rem; color: var(--main-color); margin-bottom: 1rem; }
+.skill-box h3 { font-size: 2.6rem; margin-bottom: 1.5rem; }
+.skill-box p { font-size: 1.6rem; }
+
+/* EXPERIENCE */
+.experience { background: var(--bg-color); }
+
+.experience ul {
+  padding-left: 1.8rem;   /* controla o quanto o bloco inteiro vai pra direita */
+  margin-left: 0;         /* remove deslocamento extra */
+}
+
+.experience li {
+  font-size: 1.4rem;
+}
+
+/* PROJECTS LIST */
+.projects { background: var(--bg-color); }
+.projects-list {
+    display: flex; flex-direction: column; gap: 4rem;
+    max-width: 1000px; margin: 0 auto;
+}
+.project-row {
+    display: flex;
+    background: var(--second-bg-color);
+    border: 1px solid #333;
+    border-radius: 2rem;
+    overflow: hidden;
+    transition: 0.3s ease;
+    min-height: 280px; 
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+.project-row:hover { border-color: var(--main-color); transform: translateY(-5px); }
+
+.project-thumb { flex: 0 0 40%; position: relative; overflow: hidden; }
+.project-thumb img { width: 100%; height: 100%; object-fit: cover; }
+
+.project-info { 
+    flex: 1; 
+    padding: 3rem; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+}
+.project-info h3 { font-size: 2.8rem; margin-bottom: 1rem; color: #fff; }
+.project-info p { font-size: 1.6rem; margin-bottom: 2rem; color: #ccc; }
+
+.project-tags { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 2rem; }
+.project-tags span {
+    background: #0f090b; color: var(--main-color); padding: 0.6rem 1.5rem;
+    border-radius: 5rem; font-size: 1.3rem;
+    border: 1px solid #333;
+}
+.btn-wiki {
+    align-self: flex-start;
+    background: transparent; border: 2px solid var(--main-color);
+    color: var(--main-color); font-size: 1.5rem;
+    padding: 0.8rem 2rem; border-radius: 3rem;
+    cursor: pointer; font-weight: 600;
+    display: flex; align-items: center; gap: 10px;
+    transition: 0.3s;
+}
+.btn-wiki:hover { background: var(--main-color); color: #000; }
+
+/* WIKI SECTION */
+.wiki-container {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background: var(--bg-color);
+    z-index: 200; overflow-y: auto;
+    padding: 4rem 9%;
+}
+.wiki-content { max-width: 900px; margin: 0 auto; padding-bottom: 5rem; }
+.wiki-content h2 { font-size: 3.5rem; text-align: center; color: var(--main-color); margin-bottom: 2rem; }
+.wiki-content h3 { font-size: 2.2rem; margin: 2rem 0 1rem; color: #fff; }
+.wiki-content p { font-size: 1.6rem; color: #ccc; }
+
+.btn-back {
+    background: transparent; color: var(--main-color);
+    font-size: 2rem; cursor: pointer; margin-bottom: 2rem;
+    display: flex; align-items: center; gap: 1rem;
+}
+.wiki-media-wrapper {
+    width: 100%; height: 450px;
+    background: #000; margin-bottom: 3rem; border-radius: 1rem;
+    position: relative; display: flex; align-items: center; justify-content: center;
+    border: 1px solid #333;
+}
+.wiki-media-wrapper img, .wiki-media-wrapper video {
+    max-width: 100%; max-height: 100%; object-fit: contain;
+}
+.wiki-controls button {
+    position: absolute; top: 50%; transform: translateY(-50%);
+    background: rgba(0,0,0,0.6); color: white; border-radius: 5px;
+    font-size: 2.5rem; padding: 1rem; cursor: pointer; z-index: 10;
+}
+.wiki-controls button:first-child { left: 10px; }
+.wiki-controls button:last-child { right: 10px; }
+
+/* CONTACT */
+.contact { background: var(--bg-color); }
+.contact form { max-width: 70rem; margin: 1rem auto; text-align: center; }
+.contact form .input-box { display: flex; justify-content: space-between; flex-wrap: wrap; }
+.contact form .input-box input, 
+.contact form textarea {
+    width: 100%; padding: 1.5rem; font-size: 1.6rem;
+    color: var(--text-color);
+    background: var(--second-bg-color);
+    border-radius: .8rem; margin: .7rem 0;
+    border: 1px solid #333;
+}
+.contact form .input-box input { width: 49%; }
+.contact form textarea { resize: none; }
+.contact form .btn { margin-top: 2rem; }
+
+/* FOOTER CENTRALIZADO */
+.footer {
+    display: flex; 
+    justify-content: center; /* Centraliza Horizontalmente */
+    align-items: center;
+    padding: 3rem 9%; 
+    background: var(--second-bg-color);
+    text-align: center; /* Garante que o texto dentro fique no meio */
+}
+.footer p { 
+    font-size: 1.6rem; 
+    margin: 0;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1100px) {
+    .home { flex-direction: column; padding-top: 15rem; }
+    .home-img img { width: 70vw; }
+    .project-row { flex-direction: column; }
+    .project-thumb { height: 250px; flex: none; }
+    
+    .contact form .input-box input { width: 100%; }
+
+    #menu-icon { display: block; }
+    nav {
+        position: absolute; top: 100%; left: 0; width: 100%;
+        padding: 1rem 3%; background: var(--second-bg-color);
+        border-top: .1rem solid rgba(0,0,0,.2);
+        display: none; flex-direction: column;
+    }
+    nav.active { display: flex; }
+    nav a { display: block; font-size: 2rem; margin: 3rem 0; }
+}
+
+/* =======================
+   Wiki design polish
+   ======================= */
+#wiki-section { 
+    padding-top: 14rem; 
+} /* espaço pro header fixo */
+
+#wiki-section .wiki-container {
+  padding: 6rem 9% 6rem;
+  background: radial-gradient(1200px 600px at 50% 0%, rgba(195,155,113,0.10), transparent 60%), var(--bg-color);
+}
+
+#wiki-section .wiki-content {
+  background: rgba(17,17,17,0.85);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 2rem;
+  padding: 3rem;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.55);
+}
+
+#wiki-section #wiki-title {
+  font-size: 3.6rem;
+  letter-spacing: 0.02em;
+  margin-bottom: 0.8rem;
+}
+
+#wiki-section #wiki-desc {
+  margin-top: 1rem;
+  line-height: 1.8;
+  color: rgba(255,255,255,0.82);
+}
+
+#wiki-section #wiki-status-container {
+  display: flex;
+  justify-content: center;
+  margin: 1.2rem 0 1.6rem;
+}
+
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 0.7rem 1.4rem;
+  border-radius: 999px;
+  background: rgba(0,0,0,0.35);
+  border: 1px solid rgba(255,255,255,0.10);
+  font-size: 1.35rem;
+  color: rgba(255,255,255,0.75);
+}
+.status-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #888;
+}
+.status-badge.online {
+  border-color: rgba(46,204,113,0.7);
+  color: #fff;
+}
+.status-badge.online .status-dot {
+  background: #2ecc71;
+  box-shadow: 0 0 12px rgba(46,204,113,0.7);
+}
+.status-badge.offline {
+  border-color: rgba(231,76,60,0.75);
+  color: rgba(231,76,60,0.95);
+}
+.status-badge.offline .status-dot {
+  background: #e74c3c;
+}
+
+#wiki-section .wiki-media-wrapper {
+  height: 520px;
+  border-radius: 1.6rem;
+  border: 1px solid rgba(255,255,255,0.10);
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,0.35), 0 18px 40px rgba(0,0,0,0.55);
+}
+
+#wiki-section .wiki-controls button {
+  border: 1px solid rgba(255,255,255,0.10);
+  border-radius: 12px;
+  backdrop-filter: blur(8px);
+}
+#wiki-section .wiki-controls button:hover {
+  background: var(--main-color);
+  color: #000;
+}
+
+#wiki-section #wiki-techs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+  list-style: none;
+  padding-left: 0;
+  margin: 1rem 0 0;
+}
+#wiki-section #wiki-techs li {
+  background: rgba(0,0,0,0.25);
+  border: 1px solid rgba(255,255,255,0.10);
+  color: var(--main-color);
+  padding: 0.55rem 1.25rem;
+  border-radius: 999px;
+  font-size: 1.25rem;
+}
+
+#wiki-section #wiki-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.4rem;
+  flex-wrap: wrap;
+  margin-top: 2.2rem;
+}
+#wiki-section #wiki-links .btn {
+  background: rgba(0,0,0,0.25);
+  border: 2px solid var(--main-color);
+  color: var(--main-color);
+  letter-spacing: 0.12em;
+  padding: 1rem 2.2rem;
+  border-radius: 999px;
+}
+#wiki-section #wiki-links .btn:hover {
+  background: var(--main-color);
+  color: #000;
+}
+
+@media (max-width: 900px) {
+  #wiki-section .wiki-container { padding: 5.5rem 6% 6rem; }
+  #wiki-section .wiki-content { padding: 2.2rem; }
+  #wiki-section .wiki-media-wrapper { height: 420px; }
+  #wiki-section #wiki-title { font-size: 3.0rem; }
+}
+@media (max-width: 520px) {
+  #wiki-section .wiki-media-wrapper { height: 320px; }
+  #wiki-section #wiki-links .btn { width: 100%; text-align: center; }
+}
+
+.section-lead {
+    max-width: 800px;
+    margin: 0 auto 4rem auto;
+    text-align: center;
+    font-size: 1.6rem; /* mesmo padrão do site */
+    line-height: 1.7;
+    color: #ccc;
+    white-space: normal; /* garante quebra */
+    display: block;
+}
+
+body.wiki-open header {
+  transform: none !important;
+  opacity: 1 !important;
+  pointer-events: auto !important;
+}
+
+body.no-scroll {
+  overflow: hidden;
+}

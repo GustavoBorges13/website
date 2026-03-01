@@ -1,0 +1,194 @@
+{
+  "meta": {
+    "title": "Gustavo Borges | Infrastructure, Cloud & Automation | DevOps & Linux"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "skills": "Skills",
+    "experience": "Experience",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "home": {
+    "h1": "Hi, I'm <span>Gustavo</span>",
+    "role_prefix": "I'm",
+    "typing": [
+      "IT Infrastructure & Operations",
+      "Computer Science Undergrad",
+      "Cloud & Automation",
+      "DevOps (Specialization)"
+    ],
+    "p1": "Computer Science undergraduate (UFCAT) with 2 years of experience in a corporate IT environment, working directly with infrastructure and production support. Hands-on experience with Linux, Active Directory, networking and VPNs, plus data center routines focused on availability and service continuity. Strong focus on operational automation and continuous growth toward Cloud, DevOps and DevSecOps.",
+    "hl1": "Infrastructure & production support (Linux/Windows)",
+    "hl2": "Access management, security policies and corporate networking",
+    "hl3": "Java automation: ~10 minutes saved per operational ticket",
+    "cv": "View CV (EN)",
+    "btn_contact": "Contact"
+  },
+  "about": {
+    "h2": "About <span>Me</span>",
+    "p1": "I'm a Computer Science undergraduate and an Industrial Automation technician, with hands-on experience in corporate IT environments. I have a strong analytical profile and I'm driven by problem-solving, working with infrastructure, systems administration and process automation in production environments.",
+    "card1": {
+      "title": "Profile",
+      "desc": "Solid Linux and systems administration foundation, with an operational mindset focused on troubleshooting, service continuity and continuous improvement in corporate environments."
+    },
+    "card2": {
+      "title": "Differential",
+      "desc": "Clear communication and structured technical documentation (KBs, runbooks and operational standards). I turn technical knowledge into repeatable processes and automated solutions."
+    },
+    "card3": {
+      "title": "Goal",
+      "desc": "Looking for an Infrastructure/Cloud Junior opportunity with a structured path toward DevOps and DevSecOps, applying automation, continuous integration, observability and security practices from development through operations."
+    }
+  },
+  "skills": {
+    "h2": "My <span>Skills</span>",
+    "box1": {
+      "title": "Cloud & DevOps",
+      "desc": "Oracle Cloud (VMs, networking and security), Google Cloud (GKE – studying), Docker, Kubernetes (deployments and orchestration concepts), CI/CD with GitHub Actions, Terraform/IaC fundamentals, IAM and access control."
+    },
+    "box2": {
+      "title": "Programming & Backend",
+      "desc": "Java, Python, C/C++, Bash scripting, PostgreSQL, MongoDB, REST APIs, automation and tooling."
+    },
+    "box3": {
+      "title": "Systems & Operations",
+      "desc": "Linux (3+ years), systems administration, structured troubleshooting, virtualization (KVM/QEMU, VirtualBox), basic hardening, technical documentation (KB/runbooks) and operational continuity practices."
+    },
+    "box4": {
+      "title": "Security & DevSecOps (Foundations)",
+      "desc": "Least-privilege principles, secure system configuration routines, access control, basic hardening concepts, basic vulnerability awareness and traceability/auditability."
+    },
+    "box5": {
+      "title": "AI & IoT",
+      "desc": "LLM integration (GPT/Gemini), prompt engineering, ESP32/LoRa projects, dashboards and remote control systems."
+    }
+  },
+  "exp": {
+    "h2": "Professional <span>Experience</span>",
+    "hoverHint": "Hover the cards to see previews",
+    "viewProject": "VIEW PROJECT",
+    "slideshow": "SLIDESHOW",
+    "view_gallery": "View Gallery",
+    "hpe_it": {
+      "date": "Aug 2022 – Aug 2024",
+      "title": "IT Intern – Infrastructure & Service Desk",
+      "company": "HPE Automotores do Brasil (Mitsubishi Motors)",
+      "b1": "Worked in a corporate production environment, supporting Linux/Windows systems and ensuring service availability and stability.",
+      "b2": "Active Directory administration, access management, security policies and troubleshooting in corporate networks.",
+      "b3": "Preventive Data Center routines: <strong>UPS monitoring</strong>, cooling systems and fire panel checks.",
+      "b4": "Created and reviewed technical documentation (KBs and runbooks) to standardize incident resolution.",
+      "b5": "Developed a <strong>Java</strong> tool to automate technical reports (spreadsheets → Word/PDF), reducing ~10 minutes per ticket."
+    },
+    "hpe_log": {
+      "date": "Jun 2021 – May 2022",
+      "title": "Administrative & Logistics Assistant (Apprentice)",
+      "company": "HPE Automotores do Brasil (Mitsubishi Motors)",
+      "b1": "Managed logistics flow using <strong>WMS</strong> and PeopleTools, focusing on inventory validation and production line integrity.",
+      "b2": "Engineering project: collaborated on a <strong>gravity roller conveyor</strong> to optimize flow and reduce forklift traffic.",
+      "b3": "IoT prototyping: AGV PoC with <strong>Arduino/C++</strong> (magnetic tape line-following)."
+    },
+    "edu": {
+      "date": "2021 – Present",
+      "title": "Bachelor’s Degree in Computer Science",
+      "company": "Federal University of Catalão (UFCAT)",
+      "desc": "Building strong systems/software fundamentals while developing automation projects and following a consistent Cloud/DevOps path."
+    }
+  },
+  "projects": {
+    "h2": "Projects <span>& Studies</span>",
+    "lead": "Selected projects with demos, screenshots and a technical wiki for each one.",
+    "viewWiki": "View Wiki",
+    "items": {
+      "iot": {
+        "title": "IoT Control Dashboard",
+        "short": "IoT system with real-time WebSocket communication for ESP devices, including RGB control and operational monitoring through a web dashboard."
+      },
+      "mc": {
+        "title": "Minecraft Server + Admin Panel",
+        "short": "Oracle Cloud server with an admin panel for operations, deployed on a Linux VM and accessed securely via a tunnel (Cloudflared), avoiding direct port exposure."
+      },
+      "ihc": {
+        "title": "Musikcity Website Prototype (HCI)",
+        "short": "Academic HCI project focused on UI prototyping and usability (non-commercial)."
+      },
+      "logicban": {
+        "title": "LogicBan – Game",
+        "short": "2D Java game with logic-based puzzles and level progression, developed as an academic project."
+      },
+      "ti": {
+        "title": "Java Report Automation Tool",
+        "short": "Internal tool to generate technical reports (spreadsheet → Word/PDF), saving ~10 minutes per ticket."
+      }
+    }
+  },
+  "wiki": {
+    "back": "Back to Projects",
+    "project_title": "Project Title",
+    "description": "Description",
+    "tech_stack": "Tech Stack",
+    "about": "About the Project",
+    "tech": "Technologies",
+    "highlights": "Highlights",
+    "status": {
+      "checking": "Checking status...",
+      "online": "System Online",
+      "offline": "System Offline"
+    },
+    "common": {
+      "github": "GitHub Repository",
+      "demo": "Live Demo",
+      "preview": "Page Preview",
+      "release": "Download Release",
+      "report": "Download PDF Report"
+    },
+    "items": {
+      "iot": {
+        "title": "IoT Control Dashboard",
+        "desc": "Remote control system for ESP devices focused on real-time interaction and observability. The dashboard enables quick commands, monitoring and an interface designed for operational feedback.",
+        "techs": ["ESP (C/C++)", "WebSockets", "JavaScript", "HTML/CSS", "IoT", "Monitoring UI"],
+        "highlights": ["Real-time commands via WebSockets", "Monitoring/control dashboard", "Focus on controlled environments and experimentation"]
+      },
+      "mc": {
+        "title": "Minecraft Server + Admin Panel",
+        "desc": "Cloud setup with an admin panel to simplify server operations and file handling. The focus is availability and secure remote access via tunneling, avoiding direct port exposure.",
+        "techs": ["Oracle Cloud VM", "Linux", "Python", "Cloudflared", "Automation"],
+        "highlights": ["Always-on deployment on a cloud VM", "Admin panel simplifying operations", "Secure access via tunnel"]
+      },
+      "ihc": {
+        "title": "Musikcity Website Prototype (HCI)",
+        "desc": "Academic HCI project focused on interface design, layout and UX decisions. No affiliation with the company and no commercial use.",
+        "techs": ["HTML", "CSS", "JavaScript", "HCI"],
+        "highlights": ["UI/usability-focused prototype", "Academic context", "Clean structure and navigation"]
+      },
+      "logicban": {
+        "title": "LogicBan – Game",
+        "desc": "2D Java game where progression depends on logic challenges and level design. Built to practice architecture, rendering and core game loop fundamentals.",
+        "techs": ["Java", "Graphics2D", "Game loop", "Level design"],
+        "highlights": ["Logic puzzles and progression", "Multiple levels and iteration", "Academic project + portfolio"]
+      },
+      "ti": {
+        "title": "Java Report Automation Tool",
+        "desc": "During my internship, I developed an internal Java tool to automate operational technical reports. It extracts data from spreadsheets and generates Word/PDF outputs, removing manual steps and improving team efficiency.",
+        "techs": ["Java", "Excel data extraction", "Word/PDF generation", "Desktop app"],
+        "highlights": ["~10 minutes saved per ticket", "Reduction of repetitive manual tasks", "More efficient operational workflow through automation"]
+      }
+    }
+  },
+  "contact": {
+    "h2": "Get <span>In Touch</span>",
+    "lead": "If you'd like to talk about infrastructure, automation, or a junior opportunity, reach out here.",
+    "form": {
+      "name": "Full name",
+      "email": "Your email",
+      "phone": "Phone (optional)",
+      "subject": "Subject",
+      "msg": "Message",
+      "send": "Send"
+    }
+  },
+  "footer": {
+    "copy": "Copyright © 2026 Gustavo | Infrastructure & DevOps"
+  }
+}

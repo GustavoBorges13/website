@@ -1,0 +1,9 @@
+/* style.css - O arquivo principal que chama os módulos */
+
+@import 'base.css';
+@import 'components.css';
+@import 'sections.css';
+
+/* agora: usa somente o botão do HEADER (direita) */
+.lang-btn--nav{ display: none !important; }
+.lang-btn--header{ display: inline-flex !important; }

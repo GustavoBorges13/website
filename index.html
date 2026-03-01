@@ -1,403 +1,310 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-i18n="meta.title">Gustavo Borges | Infrastructure & DevOps</title>
 
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-        <link rel="stylesheet" href="style.css">
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
 
-        <!-- Updated title to match your CV positioning -->
-        <title>Gustavo Borges | Infrastructure, Cloud & Automation (DevOps Path)</title>
-    </head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <a href="#home" class="logo">gustavos.cloud</a>
 
-    <body class="home-view">
-        <header>
-            <a href="#home" class="logo">gustavos.cloud</a>
+    <nav>
+        <a href="#home" class="active" data-i18n="nav.home">Home</a>
+        <a href="#about" data-i18n="nav.about">About</a>
+        <a href="#skills" data-i18n="nav.skills">Skills</a>
+        <a href="#experience" data-i18n="nav.experience">Experience</a>
+        <a href="#projects" data-i18n="nav.projects">Projects</a>
+        <a href="#contact" data-i18n="nav.contact">Contact</a>
+    </nav>
 
-            <nav>
-                <a href="#home" class="active">Home</a>
-                <a href="#about">About</a>
-                <a href="#skills">Skills</a>
-                <a href="#experience">Experience</a>
-                <a href="#projects">Projects</a>
-                <a href="#contact">Contact</a>
-            </nav>
+    <div class="header-actions">
+        <button id="langToggle" class="lang-btn lang-btn--header" type="button" aria-label="Change language">
+        <span class="lang-flag" aria-hidden="true">🇺🇸</span>
+        <span class="lang-label">EN</span>
+        </button>
 
-            <i class="fa-solid fa-bars" id="menu-icon"></i>
-        </header>
+        <div id="menu-icon" aria-label="Open menu"><i class="fa-solid fa-bars"></i></div>
+    </div>
+</header>
 
-        <!-- HOME SECTION -->
-        <section class="home" id="home">
-            <div class="home-img">
-                <img src="imagens/perfil_feliz2.5.jpeg" alt="Gustavo's profile picture">
-            </div>
+  <!-- HOME -->
+  <section class="home" id="home">
+    <div class="home-img">
+      <img src="imagens/perfil_feliz2.5.jpeg" alt="Gustavo Profile" />
+    </div>
 
-            <div class="home-content">
-                <h1>Hi, I'm <span>Gustavo</span></h1>
+    <div class="home-content">
+      <h1 data-i18n-html="home.h1">Hi, I'm <span>Gustavo</span></h1>
 
-                <!-- IMPORTANT:
-                     In your script.js (Typed.js), set something like:
-                     ["IT Infrastructure", "Cloud & Automation", "DevOps (Learning Path)"]
-                -->
-                <h3>I'm a <span class="typing-text"></span></h3>
+      <h3>
+        <span data-i18n="home.role_prefix">I'm a</span>
+        <span class="typing-text"></span>
+      </h3>
 
-                <!-- Updated summary to match your CV (real experience + DevOps path) -->
-                <p>
-                    A Computer Science undergraduate with <strong>2 years of experience in corporate IT environments</strong>,
-                    working with <strong>infrastructure support</strong>, <strong>system administration routines</strong>,
-                    and <strong>process automation</strong>.
-                    I have hands-on experience with <strong>Linux/Windows</strong>, <strong>Active Directory</strong>,
-                    <strong>VPN connectivity</strong>, and <strong>data center routines</strong>.
-                    Currently, I’m building a strong path toward <strong>Cloud</strong> and <strong>DevOps/DevSecOps</strong>,
-                    focusing on <strong>Docker</strong>, <strong>CI/CD</strong>, <strong>IaC concepts</strong>, and secure infrastructure practices.
-                </p>
+      <p data-i18n-html="home.p1">
+        Computer Science undergraduate with <strong>2 years of experience</strong> in IT infrastructure,
+        support, and automation. Currently focusing on <strong>Cloud</strong>, <strong>DevOps</strong>,
+        and <strong>Cybersecurity</strong> practices.
+      </p>
 
-                <div class="social-icons">
-                    <!-- If this LinkedIn URL is correct, keep it.
-                         If your real URL is linkedin.com/in/gustavoborges, switch it here too. -->
-                    <a href="https://www.linkedin.com/in/gustavo-borgez/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="https://github.com/GustavoBorges13" target="_blank"><i class="fa-brands fa-github"></i></a>
-                    <a href="https://www.instagram.com/gustavobpsilva/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="https://linktr.ee/GustavoBorges13" target="_blank"><i class="fa-solid fa-link"></i></a>
-                    <a href="mailto:ggustavo.borges13@gmail.com"><i class="fa-solid fa-envelope"></i></a>
-                </div>
+      <div class="social-icons">
+        <a href="https://www.linkedin.com/in/gustavo-borgez/" target="_blank" aria-label="LinkedIn">
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+        <a href="https://github.com/GustavoBorges13" target="_blank" aria-label="GitHub">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="mailto:ggustavo.borges13@gmail.com" aria-label="Email">
+          <i class="fa-solid fa-envelope"></i>
+        </a>
+      </div>
 
-                <!-- CV button -->
-                <a href="https://gustavoborges13.github.io/curriculo/eng_index.html" target="_blank" class="btn">View CV</a>
-            </div>
-        </section>
+      <a id="cvBtn" class="btn" target="_blank" data-i18n="home.cv">View CV</a>
+    </div>
+  </section>
 
-        <!-- ABOUT SECTION -->
-        <section class="about hidden" id="about">
-            <div class="about-content">
-                <h2>About <span>Me</span></h2>
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="about-content">
+      <h2 class="heading" data-i18n-html="about.h2">About <span>Me</span></h2>
 
-                <p>
-                    I’m a Computer Science student at UFCAT with a technical background in Industrial Automation.
-                    I enjoy building practical solutions and documenting the process clearly (runbooks, notes, and technical write-ups).
-                </p>
+      <p data-i18n="about.p1">
+        I’m a Computer Science student at UFCAT with a background in Industrial Automation.
+        I enjoy building practical solutions, documenting processes (runbooks), and automating boring tasks.
+      </p>
 
-                <p>
-                    I have <strong>2 years of experience</strong> in a corporate IT environment (Infrastructure & Service Desk),
-                    where I supported users and critical services, worked with <strong>Active Directory</strong>, <strong>VPN/network connectivity</strong>,
-                    and participated in <strong>data center routines</strong> (UPS/cooling/fire panel checks).
-                    I also developed an <strong>internal Java application</strong> to automate operational technical reporting, reducing recurring manual work.
-                </p>
+    </div>
+  </section>
 
-                <p>
-                    My current focus is building a consistent path toward <strong>Cloud</strong> and <strong>DevOps/DevSecOps</strong>,
-                    strengthening fundamentals like <strong>Linux</strong>, <strong>Docker</strong>, <strong>CI/CD</strong>,
-                    and infrastructure automation concepts, aiming for a Junior Infrastructure/Cloud role with growth into DevOps.
-                </p>
-            </div>
-        </section>
+  <!-- SKILLS -->
+  <section class="skills" id="skills">
+    <h2 class="heading" data-i18n-html="skills.h2">My <span>Skills</span></h2>
 
-        <!-- SKILLS SECTION -->
-        <section class="skills hidden" id="skills">
-            <h2>My <span>Skills</span></h2>
+    <div class="skills-container">
+      <div class="skill-box">
+        <i class="fa-solid fa-cloud"></i>
+        <h3 data-i18n="skills.box1.title">Cloud & DevOps</h3>
+        <p data-i18n="skills.box1.desc">Oracle Cloud, Docker, Kubernetes, GitHub Actions, Terraform concepts.</p>
+      </div>
 
-            <div class="skills-container">
-                <div class="skill-box">
-                    <i class="fa-solid fa-cloud"></i>
-                    <h3>Cloud & DevOps</h3>
-                    <p>Oracle Cloud, Google Cloud (GKE), Docker, Kubernetes, CI/CD (GitHub Actions), Terraform (learning), IaC concepts</p>
-                </div>
+      <div class="skill-box">
+        <i class="fa-solid fa-code"></i>
+        <h3 data-i18n="skills.box2.title">Programming</h3>
+        <p data-i18n="skills.box2.desc">Java, Python, Bash Scripting, Git, HTML/CSS/JS.</p>
+      </div>
 
-                <div class="skill-box">
-                    <i class="fa-solid fa-code"></i>
-                    <h3>Programming & Systems</h3>
-                    <p>Java, Python, Bash, Git/GitHub, Linux, Windows, REST APIs</p>
-                </div>
+      <div class="skill-box">
+        <i class="fa-solid fa-shield-halved"></i>
+        <h3 data-i18n="skills.box3.title">Infra & Security</h3>
+        <p data-i18n="skills.box3.desc">Linux Hardening, AD/IAM, VPNs, Firewalls, Networking protocols.</p>
+      </div>
+    </div>
+  </section>
 
-                <div class="skill-box">
-                    <i class="fa-solid fa-shield-halved"></i>
-                    <h3>Security & Operations</h3>
-                    <p>DevSecOps concepts, Access Control (AD/IAM concepts), Network basics, VPN/Firewall rules, Hardening concepts</p>
-                </div>
-            </div>
-        </section>
+  <!-- EXPERIENCE -->
+  <section class="experience" id="experience">
+    <h2 class="heading" data-i18n-html="exp.h2">Professional <span>Experience</span></h2>
 
-        <!-- EXPERIENCE SECTION -->
-        <section class="experience hidden" id="experience">
-            <h2 class="heading">Professional <span>Experience</span></h2>
-
-            <div class="hover-instruction">
-                <i class="fa-solid fa-computer-mouse"></i>
-                <span>Hover over the blocks to view project previews</span>
-            </div>
-
-            <div class="timeline">
-
-                <!-- Experience 1: HPE (most recent) -->
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-date">2022 - 2024</div>
-
-                    <div class="timeline-content"
-                         data-images='["imagens/hpe_TI/img_1.png", "imagens/hpe_TI/img_2.png", "imagens/hpe_TI/img_3.png", "imagens/hpe_TI/img_4.png"]'
-                         data-project="ti_automation">
-
-                        <h3>IT Intern – Infrastructure & Service Desk</h3>
-                        <p class="company">HPE Automotores do Brasil (Mitsubishi Motors)</p>
-
-                        <p>
-                            Worked in a <strong>production corporate IT environment</strong>, supporting infrastructure routines and critical services.
-                            <br><br>
-                            <strong>Key responsibilities:</strong> user access and policies using <strong>Active Directory</strong> and Microsoft admin tools,
-                            <strong>VPN/network connectivity</strong> support, workstation environments, and operational troubleshooting.
-                            <br><br>
-                            <strong>Data center routines:</strong> performed preventive inspections/checklists (UPS, cooling systems, fire panels) to help ensure availability and compliance.
-                            <br><br>
-                            <strong>Key achievement:</strong> autonomously developed a <strong>Java desktop application</strong> to automate operational technical report generation.
-                            The tool integrated spreadsheet data into Word/PDF outputs and <strong>reduced processing time by ~10 minutes per ticket</strong>,
-                            eliminating recurring manual steps and improving workflow efficiency.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Experience 2: Logistics / Apprentice -->
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-date">2021 - 2022</div>
-
-                    <div class="timeline-content"
-                         data-images='["imagens/hpe_logistica/renderv2.mp4", "imagens/hpe_logistica/img_0.jpg", "imagens/hpe_logistica/img_1.jpg", "imagens/hpe_logistica/img_2.jpg", "imagens/hpe_logistica/img_3.jpg", "imagens/hpe_logistica/img_4.jpg", "imagens/hpe_logistica/img_5.jpg", "imagens/hpe_logistica/video_demo.mp4", "imagens/hpe_logistica/img_6.png", "imagens/hpe_logistica/img_7.png","imagens/hpe_logistica/img_8.png"]'>
-
-                        <h3>Administrative & Logistics Assistant (Apprentice)</h3>
-                        <p class="company">HPE Automotores do Brasil (Mitsubishi Motors)</p>
-
-                        <p>
-                            Worked on logistics flow and inventory validation using WMS and enterprise processes.
-                            <br><br>
-                            <strong>Key projects:</strong>
-                            <ul style="list-style-position: inside; margin-top: 10px;">
-                                <li>
-                                    <strong>Gravity Roller Conveyor:</strong> collaborated on design/implementation to improve unloading flow,
-                                    reduce forklift travel, and increase packaging analysis productivity.
-                                </li>
-                                <li style="margin-top: 8px;">
-                                    <strong>AGV Prototype (Arduino):</strong> developed a <strong>PoC</strong> using Arduino/C++ to validate magnetic line tracking
-                                    for internal transport automation.
-                                </li>
-                            </ul>
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Education -->
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-date">2021 - Present</div>
-
-                    <div class="timeline-content" data-images='["imagens/none", "imagens/none"]'>
-                        <h3>Computer Science Undergraduate</h3>
-                        <p class="company">Federal University of Catalão (UFCAT)</p>
-                        <p>
-                            Focused on building strong fundamentals in systems and software engineering while developing
-                            practical infrastructure and automation projects. Targeting a Junior Infrastructure/Cloud role with growth into DevOps.
-                        </p>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- PROJECTS SECTION -->
-        <section class="projects hidden" id="projects">
-            <h2 class="heading">Latest <span>Projects</span></h2>
-
-            <div class="projects-list">
-
-                <!-- PROJECT: IOT DASHBOARD -->
-                <div class="project-row">
-                    <div class="project-thumb">
-                        <img src="imagens/Projetos/iot_project_1/img_1.png" alt="IoT Dashboard">
-                    </div>
-                    <div class="project-info">
-                        <h3>IoT Control Dashboard</h3>
-                        <p>
-                            A remote control system for ESP devices with real-time WebSocket communication, RGB LED control,
-                            and live monitoring through a secure web interface.
-                        </p>
-                        <div class="project-tags">
-                            <span>C++</span>
-                            <span>WebSockets</span>
-                            <span>JavaScript</span>
-                        </div>
-                        <a href="#" class="btn-wiki" onclick="openProject('iot-dashboard')">
-                            View Wiki <i class="fa-solid fa-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- PROJECT: MINECRAFT SERVER -->
-                <div class="project-row">
-                    <div class="project-thumb">
-                        <img src="imagens/minecraft-thumb.jpg" alt="Minecraft Server" onerror="this.src='https://placehold.co/600x400/1a1a1a/C39B71?text=Oracle+Cloud'">
-                    </div>
-                    <div class="project-info">
-                        <h3>Minecraft Admin Panel</h3>
-                        <p>
-                            Automated server management hosted on Oracle Cloud using Virtual Machines.
-                            Includes a custom Python admin panel and Cloudflared tunneling for secure access.
-                        </p>
-                        <div class="project-tags">
-                            <span>Python</span>
-                            <span>Oracle Cloud</span>
-                            <span>Linux</span>
-                        </div>
-                        <a href="#" class="btn-wiki" onclick="openProject('minecraft_server')">
-                            View Wiki <i class="fa-solid fa-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- PROJECT: WEBSITE PROTOTYPE -->
-                <div class="project-row">
-                    <div class="project-thumb">
-                        <img src="imagens/Projetos/ihc_boostrap/thumb.png" alt="Website" onerror="this.src='https://placehold.co/600x400/1a1a1a/C39B71?text=Website'">
-                    </div>
-                    <div class="project-info">
-                        <h3>Musikcity Prototype Website</h3>
-                        <p>
-                            Academic project for the Human-Computer Interaction (HCI) course. No affiliation with the company and not used commercially.
-                        </p>
-                        <div class="project-tags">
-                            <span>HTML</span>
-                            <span>CSS</span>
-                            <span>JavaScript</span>
-                        </div>
-                        <a href="#" class="btn-wiki" onclick="openProject('ihc_boostrap')">
-                            View Wiki <i class="fa-solid fa-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- PROJECT: LOGICBAN -->
-                <div class="project-row">
-                    <div class="project-thumb">
-                        <img src="imagens/Projetos/logicban/thumb.png" alt="LogicBan" onerror="this.src='https://placehold.co/600x400/1a1a1a/C39B71?text=LogicBan'">
-                    </div>
-                    <div class="project-info">
-                        <h3>LogicBan - Game</h3>
-                        <p>
-                            A 2D Java game developed as an academic project, focused on logic-based puzzles and gameplay challenges.
-                        </p>
-                        <div class="project-tags">
-                            <span>Java</span>
-                            <span>Game Dev</span>
-                            <span>Graphics2D</span>
-                        </div>
-                        <a href="#" class="btn-wiki" onclick="openProject('logicban')">
-                            View Wiki <i class="fa-solid fa-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- PROJECT: JAVA AUTOMATION TOOL -->
-                <div class="project-row">
-                    <div class="project-thumb">
-                        <img src="imagens/java-thumb.jpg" alt="Java Tool" onerror="this.src='https://placehold.co/600x400/1a1a1a/C39B71?text=Java+Automation'">
-                    </div>
-                    <div class="project-info">
-                        <h3>Technical Report Automation Tool</h3>
-                        <p>
-                            A Java desktop application built to automate spreadsheet-to-Word/PDF reporting.
-                            Reduced manual processing time by ~10 minutes per ticket in a corporate IT environment.
-                        </p>
-                        <div class="project-tags">
-                            <span>Java</span>
-                            <span>Automation</span>
-                            <span>Desktop App</span>
-                        </div>
-                        <a href="#" class="btn-wiki" onclick="openProject('ti_automation')">
-                            View Wiki <i class="fa-solid fa-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- PROJECT DETAILS / WIKI SECTION -->
-        <section class="project-details hidden" id="project-wiki">
-            <button class="btn-back" onclick="closeProject()"><i class="fa-solid fa-arrow-left"></i> Back to Projects</button>
-
-            <div class="wiki-content">
-                <h2 id="wiki-title">Project Title</h2>
-
-                <div id="wiki-status-container" style="display: flex; justify-content: center; margin-bottom: 10px;"></div>
-
-                <div class="slideshow-container">
-                    <div class="slide-wrapper" id="wiki-slides"></div>
-                    <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
-                    <button class="next" onclick="moveSlide(1)">&#10095;</button>
-                </div>
-
-                <div class="wiki-info">
-                    <h3>About the Project</h3>
-                    <p id="wiki-desc">Description goes here...</p>
-
-                    <h3>Technologies Used</h3>
-                    <ul id="wiki-techs" class="tech-list"></ul>
-
-                    <div class="wiki-links" id="wiki-links"></div>
-                </div>
-            </div>
-        </section>
-
-        <!-- CONTACT SECTION -->
-        <section class="contact hidden" id="contact">
-            <h2 class="heading">Contact <span>Me</span></h2>
-
-            <form action="https://formspree.io/f/xwvvozzr" method="POST">
-                <div class="input-box">
-                    <input type="text" name="name" placeholder="Full Name" required>
-                    <input type="email" name="email" placeholder="Email Address" required>
-                </div>
-
-                <div class="input-box">
-                    <input type="number" name="phone" placeholder="Mobile Number">
-                    <input type="text" name="_subject" placeholder="Email Subject" required>
-                </div>
-
-                <textarea name="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
-
-                <input type="text" name="_gotcha" style="display:none">
-                <input type="submit" value="Send Message" class="btn">
-            </form>
-        </section>
-
-        <!-- HOVER POPUP -->
-        <div id="hover-popup" class="hover-popup">
-            <img id="popup-img" src="" alt="">
-            <video id="popup-video" muted loop playsinline></video>
-            <p id="popup-text" class="no-preview-msg">NO PREVIEW</p>
-
-            <div class="popup-controls" id="popup-controls">
-                <button id="btn-prev"><i class="fa-solid fa-chevron-left"></i></button>
-                <span id="popup-info-text" class="control-text">SLIDESHOW</span>
-                <button id="btn-next"><i class="fa-solid fa-chevron-right"></i></button>
-            </div>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date" data-i18n="exp.hpe_it.date"></div>
+        <div class="timeline-content"
+          data-images='[
+            "imagens/hpe_ti/img_1.png",
+            "imagens/hpe_ti/img_2.png",
+            "imagens/hpe_ti/img_3.png",
+            "imagens/hpe_ti/img_4.png",
+            "imagens/hpe_ti/img_5.png"
+          ]'>
+          <h3 data-i18n="exp.hpe_it.title"></h3>
+          <p class="company" data-i18n="exp.hpe_it.company"></p>
+          <ul class="exp-bullets">
+            <li data-i18n-html="exp.hpe_it.b1"></li>
+            <li data-i18n-html="exp.hpe_it.b2"></li>
+            <li data-i18n-html="exp.hpe_it.b3"></li>
+            <li data-i18n-html="exp.hpe_it.b4"></li>
+            <li data-i18n-html="exp.hpe_it.b5"></li>
+          </ul>
+          <button class="btn-gallery" onclick="openGallery('hpe_ti')">
+            <i class="fa-solid fa-images"></i>
+            <span data-i18n="exp.view_gallery">View Gallery</span>
+          </button>
         </div>
+      </div>
 
-        <!-- FOOTER -->
-        <footer class="footer" style="padding: 2rem 9%; background: var(--second-bg-color); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
-            <div class="footer-text">
-                <p style="font-size: 1.6rem;">Copyright &copy; 2026 by Gustavo | All Rights Reserved.</p>
-            </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date" data-i18n="exp.hpe_log.date"></div>
+        <div class="timeline-content"
+          data-images='[
+            "imagens/hpe_logistica/renderv2.mp4",
+            "imagens/hpe_logistica/img_0.jpg",
+            "imagens/hpe_logistica/img_1.jpg",
+            "imagens/hpe_logistica/img_2.jpg",
+            "imagens/hpe_logistica/img_3.jpg",
+            "imagens/hpe_logistica/img_4.jpg",
+            "imagens/hpe_logistica/img_5.jpg",
+            "imagens/hpe_logistica/video_demo.mp4",
+            "imagens/hpe_logistica/img_6.png",
+            "imagens/hpe_logistica/img_7.png",
+            "imagens/hpe_logistica/img_8.png"
+          ]'>
+          <h3 data-i18n="exp.hpe_log.title"></h3>
+          <p class="company" data-i18n="exp.hpe_log.company"></p>
+          <ul class="exp-bullets">
+            <li data-i18n-html="exp.hpe_log.b1"></li>
+            <li data-i18n-html="exp.hpe_log.b2"></li>
+            <li data-i18n-html="exp.hpe_log.b3"></li>
+          </ul>
 
-            <a href="https://www.siterastreio.com.br/" target="_blank" style="opacity: 0.001; font-size: 1px; position: absolute; pointer-events: none;">Rastreamento</a>
+          <button class="btn-gallery" onclick="openGallery('hpe_logistica')">
+            <i class="fa-solid fa-images"></i>
+            <span data-i18n="exp.view_gallery">View Gallery</span>
+          </button>
+        </div>
+      </div>
 
-            <div class="footer-iconTop">
-                <a href="#home" style="display: inline-flex; justify-content: center; align-items: center; padding: .8rem; background: var(--main-color); border-radius: .8rem; transition: .5s ease;">
-                    <i class="fa-solid fa-arrow-up" style="font-size: 2.4rem; color: var(--second-bg-color);"></i>
-                </a>
-            </div>
-        </footer>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date" data-i18n="exp.edu.date"></div>
+        <div class="timeline-content">
+          <h3 data-i18n="exp.edu.title"></h3>
+          <p class="company" data-i18n="exp.edu.company"></p>
+          <p data-i18n="exp.edu.desc"></p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-        <script src="script.js"></script>
-    </body>
+  <!-- PROJECTS -->
+  <section class="projects" id="projects">
+    <h2 class="heading" data-i18n-html="projects.h2">Projects <span>& Case Studies</span></h2>
+    <p class="section-lead" data-i18n="projects.lead">
+      Projetos selecionados com demo, screenshots e uma wiki técnica para cada um.
+    </p>
+    <div class="projects-list"></div>
+  </section>
+
+  <!-- WIKI -->
+  <section id="wiki-section" class="wiki-container hidden">
+    <button class="btn-back" onclick="closeWiki()">
+      <i class="fa-solid fa-arrow-left"></i>
+      <span data-i18n="wiki.back">Back to Projects</span>
+    </button>
+
+    <div class="wiki-content">
+      <h2 id="wiki-title" data-i18n="wiki.project_title">Project Title</h2>
+      <div id="wiki-status-container" class="wiki-status"></div>
+
+      <div class="wiki-media-wrapper">
+        <div id="wiki-media-display"></div>
+        <div class="wiki-controls">
+          <button onclick="moveWikiSlide(-1)">&#10094;</button>
+          <button onclick="moveWikiSlide(1)">&#10095;</button>
+        </div>
+      </div>
+
+      <div class="wiki-details">
+        <h3 data-i18n="wiki.description">Description</h3>
+        <p id="wiki-desc"></p>
+
+        <h3 data-i18n="wiki.tech_stack">Tech Stack</h3>
+        <ul id="wiki-techs" class="tech-list"></ul>
+
+        <div id="wiki-links" class="wiki-links-row"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <h2 class="heading" data-i18n-html="contact.h2">Fale <span>Comigo</span></h2>
+    <p class="section-lead" data-i18n="contact.lead"></p>
+
+    <form action="https://formspree.io/f/xwvvozzr" method="POST">
+      <div class="input-box">
+        <input
+          type="text"
+          name="name"
+          required
+          data-i18n-placeholder="contact.form.name"
+          placeholder="Nome completo"
+        />
+
+        <input
+          type="email"
+          name="email"
+          required
+          data-i18n-placeholder="contact.form.email"
+          placeholder="Seu e-mail"
+        />
+      </div>
+
+      <div class="input-box">
+        <input
+          type="tel"
+          name="phone"
+          data-i18n-placeholder="contact.form.phone"
+          placeholder="Telefone (opcional)"
+        />
+
+        <input
+          type="text"
+          name="subject"
+          data-i18n-placeholder="contact.form.subject"
+          placeholder="Assunto"
+        />
+      </div>
+
+      <textarea
+        name="message"
+        cols="30"
+        rows="10"
+        required
+        data-i18n-placeholder="contact.form.msg"
+        placeholder="Mensagem"
+      ></textarea>
+
+      <!-- RECOMENDADO: button (mais fácil pra i18n) -->
+      <button type="submit" class="btn" data-i18n="contact.form.send">Enviar</button>
+
+      <!-- Se você quiser manter input submit, usa esse no lugar do button:
+      <input type="submit" class="btn" data-i18n-value="contact.form.send" value="Enviar" />
+      -->
+    </form>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p data-i18n="footer.copy">Copyright &copy; 2026 Gustavo | Infrastructure & DevOps</p>
+  </footer>
+
+  <!-- SCROLL TOP -->
+  <a href="#home" class="scroll-top" id="scrollTopBtn">
+    <i class="fa-solid fa-arrow-up"></i>
+  </a>
+
+  <!-- LIGHTBOX -->
+  <div id="lightbox" class="lightbox-overlay">
+    <span class="close-lightbox" onclick="closeLightbox()">&times;</span>
+    <div class="lightbox-content">
+      <button class="lb-prev" onclick="changeLightboxSlide(-1)">&#10094;</button>
+      <div id="lightbox-media-container"></div>
+      <button class="lb-next" onclick="changeLightboxSlide(1)">&#10095;</button>
+    </div>
+  </div>
+
+  <!-- SCRIPTS -->
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/script.js"></script>
+</body>
 </html>
